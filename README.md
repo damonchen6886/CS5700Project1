@@ -1,6 +1,6 @@
 ## Class project for cs5700 network class
 
-### This project is to implement a client program which communicates with a server using sockets
+### Implement a client program which communicates with a server using sockets
 
 
 
