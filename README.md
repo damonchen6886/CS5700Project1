@@ -27,7 +27,7 @@ then run
 
 where content in `< >` is optional
 
-**Alternatively, you can ignore the above setps and directly run** 
+**Alternatively, you can ignore the above steps and directly run** 
 
 `./client <-p port> <-s> [hostname] [NEU ID]`
 
