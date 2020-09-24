@@ -5,9 +5,10 @@
 
 ---
 
-##### Run the program:
+#### Run the program:
 
 `./client <-p port> <-s> [hostname] [NEU ID]`
+
 **you can ignore the detailed setps below and run the above command directly**
 
 ---
