@@ -56,4 +56,5 @@ High-Level approach:
 5. Process the response from the server and send back the math result until the response message contains BYE
 ---
 Challenges:
+
 The hardest part is to create an SSL socket. Despite the fact that I have created the SSLsocket in my code, I kept getting the SSLException while sending the first message to the server. The printed call stackTrce indicates the error is "Unable to find valid certification path to requested target." Looking it up, I found an official document I mentioned above that can solve the issue. Once follow the step and update the system.setProperty, the code works fine and successfully generated a new secret for the SSL socket.
