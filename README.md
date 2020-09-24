@@ -54,7 +54,7 @@ High-Level approach:
 3. Check if the command argument contains a specific portal or SSL enabled 
 4. Create a Client object and set given value to attributes of the object, run to create connection method
 5. Process the response from the server and send back the math result until the response message contains BYE
-I tested my code mostly from the log message. and It helps me a lot in terms of tracking the where the error occur and chcking if the value input is what I expected
+6. I tested my code mostly from the log message. and It helps me a lot in terms of tracking the where the error occur and chcking if the value input is what I expected
 ---
 Challenges:
 
