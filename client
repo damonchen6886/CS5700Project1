@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# run java file
+
+#javac Client.java
+
+#sleep 5 
+
+java Client $@ 
