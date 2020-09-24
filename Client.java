@@ -55,7 +55,8 @@ public class Client {
         try{
 //             SSL socket
             if(SSL){
-
+                System.setProperty("javax.net.ssl.trustStore", "jssecacerts");
+                //System.setProperty("javax.net.ssl.KeyStorePassword", "password");
                 SSLSocketFactory sslSocketFactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
                 socket = (SSLSocket) sslSocketFactory.createSocket(this.server,this.port);
                 System.out.println("SSL socket initialized, port is "+ this.port);
