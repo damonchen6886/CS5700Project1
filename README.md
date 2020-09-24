@@ -19,7 +19,8 @@ then build the installCert class to create a certificate. run
 `javac InstallCert.java`
 once finished, run
 `java InstallCert cs5700fa20.ccs.neu.edu:27996`
-once the command line message prompt,
+once the command line message prompt
+
 
 ![picture](https://github.com/damonchen6886/CS5700Project1/blob/master/reference/screenshot.PNG)
 
@@ -29,6 +30,7 @@ https://github.com/escline/InstallCert/blob/master/InstallCert.java
 then run 
 `java Client <-p port> <-s> [hostname] [NEU ID]` 
 where contnet in `< >` is optional
+
 ---
 
 
