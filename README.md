@@ -1,5 +1,5 @@
 # CS5700Project1
-**Class project for cs5700 network class**
+
 
 ### This project is to implement a client program which communicates with a server using sockets
 
