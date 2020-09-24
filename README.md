@@ -1,7 +1,7 @@
 # CS5700Project1
 
 
-### This project is to implement a client program which communicates with a server using sockets
+### implement a client program which communicates with a server using sockets
 
 ---
 
