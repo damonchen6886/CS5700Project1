@@ -13,22 +13,34 @@
 ---
 ##### how to run this program from scratch:
 run  
+
 ` Make `
-It will automatically build the Client.java
+
+It will build the Client.java
 then build the installCert class to create a certificate. run
+
 `javac InstallCert.java`
+
 once finished, run
+
 `java InstallCert cs5700fa20.ccs.neu.edu:27996`
+
 once the command line message prompt
 
 
 ![picture](https://github.com/damonchen6886/CS5700Project1/blob/master/reference/screenshot.PNG)
 
-press `1` , it will generate a jssecacerts file which is the certificate that SSL socket needs. 
+press 
+`1` 
+
+it will generate a jssecacerts file which is the certificate that SSL socket needs. 
 Please note this class is from the offcial Orcle doc:
 https://github.com/escline/InstallCert/blob/master/InstallCert.java
+
 then run 
+
 `java Client <-p port> <-s> [hostname] [NEU ID]` 
+
 where contnet in `< >` is optional
 
 ---
