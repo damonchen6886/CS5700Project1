@@ -23,25 +23,25 @@ public class Client {
         try {
             int p = Integer.parseInt(port);
             this.port = p;
-            System.out.println("Port has been set to " + p);
+//            System.out.println("Port has been set to " + p);
         }catch(NumberFormatException e){
-            System.err.println("the port should be number");
+//            System.err.println("the port should be number");
         }
 
 
     }
     public void setSSL(boolean SSL){
         this.SSL = SSL;
-        System.out.println("SSL has been set to " + SSL);
+//        System.out.println("SSL has been set to " + SSL);
     }
 
     public void setNUID(String NUID) {
-        System.out.println("NUID has been set to " + NUID);
+//        System.out.println("NUID has been set to " + NUID);
         this.NUID = NUID;
     }
 
     public void setServer(String server) {
-        System.out.println("Host has been set to " + server);
+//        System.out.println("Host has been set to " + server);
         this.server = server;
     }
 
@@ -59,16 +59,16 @@ public class Client {
                 //System.setProperty("javax.net.ssl.KeyStorePassword", "password");
                 SSLSocketFactory sslSocketFactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
                 socket = (SSLSocket) sslSocketFactory.createSocket(this.server,this.port);
-                System.out.println("SSL socket initialized, port is "+ this.port);
+//                System.out.println("SSL socket initialized, port is "+ this.port);
 
 
             }
             else{
 
                 socket = new Socket(this.server,this.port);
-                System.out.println("regular socket initialized");
+//                System.out.println("regular socket initialized");
             }
-            System.out.println("connected");
+//            System.out.println("connected");
             InputStream in = socket.getInputStream();
             OutputStream out = socket.getOutputStream();
             String secretFlag;
@@ -78,12 +78,12 @@ public class Client {
 
             // first message:
             printWriter.println(messageHeader+ " HELLO " + NUID + "\n");
-            System.out.println("Sending message to server :" + messageHeader+ " HELLO " + NUID);
+//            System.out.println("Sending message to server :" + messageHeader+ " HELLO " + NUID);
             printWriter.flush();
 
             // Second message: receive math expression:
             String message = bufferedReader.readLine();
-            System.out.println("Server response message is :" + message);
+//            System.out.println("Server response message is :" + message);
             String[] splitMessage= message.split(" ");
             // validate the message received from server
             while(validateResponse(splitMessage)){
@@ -91,20 +91,21 @@ public class Client {
                 int mathResult = computeResult(splitMessage);
 
                 //third message:
-                System.out.println("Calculated math result is :" + mathResult);
-                System.out.println("sending math result to server :" + messageHeader + " " + mathResult);
+//                System.out.println("Calculated math result is :" + mathResult);
+//                System.out.println("sending math result to server :" + messageHeader + " " + mathResult);
                 printWriter.println(messageHeader + " " + mathResult);
                 printWriter.flush();
                 // update the new message
                 message= bufferedReader.readLine();
-                System.out.println("Server repose message is :" + message);
+//                System.out.println("Server repose message is :" + message);
                 splitMessage = message.split(" ");
             }
             // last message
             if(checkByeMessage(splitMessage)){
                 secretFlag = splitMessage[1];
-                System.out.println("secretFlag is :" + secretFlag);
-                System.out.println("exiting");
+                System.out.println(secretFlag);
+//                System.out.println("secretFlag is :" + secretFlag);
+//                System.out.println("exiting");
                 bufferedReader.close();
                 printWriter.close();
                 socket.close();
@@ -128,9 +129,9 @@ public class Client {
     private int computeResult(String[] message){
 
         String operator = message[3];
-        System.out.println("Integer.parseInt(message[2]) = "+ Integer.parseInt(message[2]) );
-        System.out.println("Integer.parseInt(message[2]) = "+ Integer.parseInt(message[4]) );
-        System.out.println("operator = " + operator);
+//        System.out.println("Integer.parseInt(message[2]) = "+ Integer.parseInt(message[2]) );
+//        System.out.println("Integer.parseInt(message[2]) = "+ Integer.parseInt(message[4]) );
+//        System.out.println("operator = " + operator);
 
         if(operator.equals("+")){
             return Integer.parseInt(message[2]) + Integer.parseInt(message[4]);
@@ -181,7 +182,7 @@ public class Client {
             if(args[i].equals("-p")){
 
                 c.setPort(args[i+1]);
-                System.out.println("args[i+1]"+ args[i+1]);
+//                System.out.println("args[i+1]"+ args[i+1]);
                 port = args[i+1];
             }
             else if(args[i].equals("-s")) {
